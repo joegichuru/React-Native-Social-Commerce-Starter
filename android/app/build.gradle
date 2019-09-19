@@ -192,13 +192,12 @@ dependencies {
     implementation project(':react-native-video')
     implementation project(':react-native-document-picker')
     implementation project(':react-native-image-picker')
-
     implementation project(':react-native-camera')
     implementation project(':react-native-action-sheet')
     implementation project(':rn-fetch-blob')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation "com.facebook.react:react-native:+"
+    implementation "com.facebook.react:react-native:${var}"
     implementation 'androidx.palette:palette:1.0.0'// From node_modules
 
     if (enableHermes) {

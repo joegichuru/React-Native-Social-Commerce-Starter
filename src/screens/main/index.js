@@ -23,9 +23,10 @@ import {Account, Cart, Feed, Home, MessageBubble} from '../../Icons';
 import {Color} from '../../theme';
 import {fromLeft} from 'react-navigation-transitions';
 import {createStackNavigator} from 'react-navigation-stack';
-import EditProfileScreen from '../EditProfileScreen';
+import EditProfileScreen from '../editprofile/EditProfileScreen';
 import CreateAvatarStack from './CreateAvatarStack';
 import {colors} from '../../config/Theme';
+import ChannelList from '../messages/ChannelList';
 
 const NavBar = (props) => {
     const index = props.navigation.state.index;
@@ -87,6 +88,21 @@ const ProfileStack = createStackNavigator({
     }),
 });
 
+const MessagesStack = createStackNavigator({
+    Messages: {
+        screen: ChannelList,
+    },
+    Chat: {
+        screen: MessageScreen,
+    },
+
+}, {
+    initialRouteName: 'Messages',
+    headerMode: 'none',
+    navigationOptions: ({navigation}) => ({
+        tabBarVisible: navigation.state.index < 1,
+    }),
+});
 const Navigator = createBottomTabNavigator({
     Home: {
         screen: HomeScreen,
@@ -95,7 +111,7 @@ const Navigator = createBottomTabNavigator({
         screen: FeedScreen,
     },
     Message: {
-        screen: MessageScreen,
+        screen: MessagesStack,
     },
     Cart: {
         screen: CartScreen,

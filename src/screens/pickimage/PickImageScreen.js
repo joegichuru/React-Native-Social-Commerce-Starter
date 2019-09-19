@@ -5,11 +5,11 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import {colors} from '../config/Theme';
-import * as PostActions from '../actions/Post.actions';
-import * as ProfileActions from '../actions/Profile.actions';
+import {colors} from '../../config/Theme';
+import * as PostActions from '../../actions/Post.actions';
+import * as ProfileActions from '../../actions/Profile.actions';
 
-import DeviceGallery from '../components/Post/DeviceGallery';
+import DeviceGallery from '../../components/Post/DeviceGallery';
 
 class PickImageScreen extends Component {
   static navigationOptions = {

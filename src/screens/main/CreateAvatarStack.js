@@ -12,7 +12,7 @@ import {createTabNavigator,createBottomTabNavigator} from "react-navigation-tabs
 import  Ionicons  from 'react-native-vector-icons/Ionicons';
 import { colors } from '../../config/Theme';
 
-import PickImageScreen from '../PickImageScreen';
+import PickImageScreen from '../pickimage/PickImageScreen';
 import CaptureImageScreen from '../CaptureImageScreen';
 
 import TabBarPhoto from './TabBarPhoto';

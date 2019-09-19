@@ -43,6 +43,7 @@ target 'socialcommerce' do
 
   pod 'react-native-video', :path => '../node_modules/react-native-video'
 
+
   target 'socialcommerceTests' do
     inherit! :search_paths
     # Pods for testing

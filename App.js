@@ -15,8 +15,9 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import Main from './src/screens/main';
 import reducer from "./src/redux/reducers"
-const store=createStore(reducer);
-console.log("store.getState()",store.getState());
+
+const store = createStore(reducer);
+console.log("store.getState()", store.getState());
 const App = () => {
     return (
         <Provider store={store}>
